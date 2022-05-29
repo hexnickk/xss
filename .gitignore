@@ -1,0 +1,9 @@
+# Idea files
+.idea
+xss.iml
+
+# Django files
+db.sqlite3
+
+# Python files
+__pycache__

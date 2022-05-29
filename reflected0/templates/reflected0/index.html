@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% if search is None %}
+        You need to search for something
+    {% else %}
+        You searched for {{ search|safe }}
+    {% endif %}
+{% endblock %}
