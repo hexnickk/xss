@@ -3,6 +3,6 @@ services:
   xss:
     build: .
     environment:
-      - DJANGO_ENV=PROD
+      - DJANGO_ENV=.env.prod
     ports:
       - "8000:8000"

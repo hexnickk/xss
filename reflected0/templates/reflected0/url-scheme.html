@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .p-4 {
+            padding: 32px;
+        }
+
+        .mb-2 {
+            margin-bottom: 8px;
+        }
+
+        .me-2 {
+            margin-right: 8px;
+        }
+
+        .mb-3 {
+            margin-bottom: 16px;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .rainbow-text {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+    <main class="main p-4">
+        <div>
+            <h1 class="mb-3">🔎 <span class="rainbow-text">Yet Another Facebook</span></h1>
+
+            {% if profile is None %}
+                <form class="mb-3" method="POST">
+                    <div class="mb-2" style="display: flex">
+                        <label class="me-2">
+                            Your twitter link:
+                        </label>
+                        <input
+                            name="profile"
+                            placeholder="https://twitter.com/kozlovzxc"
+                            value="{{ profile }}"
+                            style="flex-grow: 1"
+                        />
+                    </div>
+
+                    <button type="submit">Save</button>
+                </form>
+            {% else %}
+                <div>
+                    Here is your <a href="{{ profile }}">Twitter profile</a>.
+                </div>
+            {% endif %}
+        </div>
+    </main>
+{% endblock %}
