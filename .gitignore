@@ -4,6 +4,7 @@ xss.iml
 
 # Django files
 db.sqlite3
+.env.prod
 
 # Python files
 __pycache__

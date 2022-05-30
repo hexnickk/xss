@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  xss:
+    build: .
+    environment:
+      - DJANGO_ENV=PROD
+    ports:
+      - "8000:8000"
