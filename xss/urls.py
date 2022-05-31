@@ -20,5 +20,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='reflected'), name='index'),
     path('reflected0', RedirectView.as_view(url='reflected'), name='reflected-legacy'),
 
-    path('reflected', include('reflected0.urls'), name='reflected'),
+    path('reflected', include('reflected.urls'), name='reflected'),
 ]
