@@ -5,7 +5,7 @@ from .views import ReflectedHTMLView, ReflectedJSONView, ReflectedURLView, Refle
 
 app_name = 'reflected'
 urlpatterns = [
-    path('', RedirectView.as_view(pattern_name="reflected:simple"), name='index'),
+    path('', RedirectView.as_view(pattern_name="reflected:simple", query_string=True), name='index'),
     path('/simple', ReflectedHTMLView.as_view(), name='simple'),
     path('/json', ReflectedJSONView.as_view(), name='json'),
     path('/url', ReflectedURLView.as_view(), name='url'),

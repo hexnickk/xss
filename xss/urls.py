@@ -17,8 +17,8 @@ from django.urls import path, include
 from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('', RedirectView.as_view(url='reflected'), name='index'),
-    path('reflected0', RedirectView.as_view(url='reflected'), name='reflected-legacy'),
+    path('', RedirectView.as_view(url='reflected', query_string=True), name='index'),
+    path('reflected0', RedirectView.as_view(url='reflected', query_string=True), name='reflected-legacy'),
 
     path('reflected', include('reflected.urls'), name='reflected'),
 ]
